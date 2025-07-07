@@ -120,14 +120,14 @@ int choice;
               cout<<"Welcome"<<endl;
               cout<<"1.Add Book"<<endl;
               cout<<"2.Display all books"<<endl;
-              cout<<"3.Search Book bt title "<<endl;
+              cout<<"3.Search Book by title "<<endl;
               cout<<"4.Borrowed a Book with Id"<<endl;
               cout<<"5.Return a Book with ID "<<endl;
               cout<<"6.Exit"<<endl;
               cout<<"enter ur choice: ";
               cin>>choice;
 
-              // clear buffer or terminal
+              // clear terminal
               if(cin.fail()){
                 cin.clear();
                 cin.ignore(INT_MAX,'\n');
@@ -157,7 +157,7 @@ int choice;
               else if (choice == 3){
                     string keyword;
                     cin.ignore();
-                    cout<<"Enter the title to serach the book: ";
+                    cout<<"Enter the title to search the book: ";
                     getline(cin,keyword);
                     BookLibrary.searchBook(keyword);
               }
